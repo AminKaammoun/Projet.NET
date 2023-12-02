@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\amink\\.nuget\\packages\\": {}
+    "C:\\Users\\abdah\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\amink\\source\\repos\\Projet.Net\\Projet.Net\\Projet.Net.csproj",
+      "projectUniqueName": "C:\\Users\\abdah\\source\\repos\\Projet.net\\Projet.NET\\Projet.Net\\Projet.Net.csproj",
       "projectName": "Projet.Net",
-      "projectPath": "C:\\Users\\amink\\source\\repos\\Projet.Net\\Projet.Net\\Projet.Net.csproj",
-      "packagesPath": "C:\\Users\\amink\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\amink\\source\\repos\\Projet.Net\\Projet.Net\\obj\\",
+      "projectPath": "C:\\Users\\abdah\\source\\repos\\Projet.net\\Projet.NET\\Projet.Net\\Projet.Net.csproj",
+      "packagesPath": "C:\\Users\\abdah\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\abdah\\source\\repos\\Projet.net\\Projet.NET\\Projet.Net\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\amink\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\abdah\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
