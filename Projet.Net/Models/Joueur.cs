@@ -1,23 +1,21 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
 
-namespace Projet.Net.Models
+namespace Projet.Net.Models;
+
+public partial class Joueur
 {
-    public class Joueur
-    {
-        [Key]
-        public int JoueurId { get; set; }
+    public int JoueurId { get; set; }
 
-        [Required]
-        public string JoueurPseudo { get; set; }
-        [Required]  
-        public string JoueurName { get; set; }
-        [Required]
-        public string JoueurEmail { get; set; }
+    public string Pseudonyme { get; set; } = null!;
 
-        [ForeignKey("EquipeId")]
-        public int? EquipeId { get; set; }
+    public DateTime? DateNaissance { get; set; }
 
-        public virtual Equipe Equipe { get; set; }
-    }
+    public int? EquipeId { get; set; }
+
+    public int? UserId { get; set; }
+
+    public virtual Equipe? Equipe { get; set; }
+
+    public virtual User? User { get; set; }
 }

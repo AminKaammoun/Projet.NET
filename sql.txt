@@ -1,0 +1,60 @@
+CREATE TABLE Users
+(
+    UserId INT PRIMARY KEY,
+    Username NVARCHAR(255) NOT NULL,
+    PasswordHash NVARCHAR(255) NOT NULL,
+    Email NVARCHAR(255) NOT NULL,
+    Role NVARCHAR(50) NOT NULL, -- 'Admin' or 'Joueur'
+    -- Add other properties as needed...
+);
+
+CREATE TABLE Equipes
+(
+    EquipeId INT PRIMARY KEY,
+    NomEquipe NVARCHAR(255) NOT NULL,
+    -- Add other properties as needed...
+);
+
+-- Create Tournois table
+CREATE TABLE Tournois
+(
+    TournoiId INT PRIMARY KEY,
+    Nom NVARCHAR(255) NOT NULL,
+	 Descr NVARCHAR(255) NOT NULL,
+	  jeu NVARCHAR(255) NOT NULL,
+
+    DateDebut DATE,
+    DateFin DATE,
+    
+    -- Add other properties as needed...
+);
+
+-- Create Joueurs table
+CREATE TABLE Joueurs
+(
+    JoueurId INT PRIMARY KEY,
+    Pseudonyme NVARCHAR(255) NOT NULL,
+    DateNaissance DATE,
+  
+    EquipeId INT,
+    UserId INT,
+    FOREIGN KEY (EquipeId) REFERENCES Equipes(EquipeId),
+    FOREIGN KEY (UserId) REFERENCES Users(UserId),
+    -- Add other properties as needed...
+);
+
+-- Create Resultats table
+CREATE TABLE Resultats
+(
+    ResultatId INT PRIMARY KEY,
+    TournoiId INT,
+    EquipeGagnanteId INT,
+    EquipePerdanteId INT,
+    ScoreGagnant INT,
+    ScorePerdant INT,
+    DateMatch DATE,
+    FOREIGN KEY (TournoiId) REFERENCES Tournois(TournoiId),
+    FOREIGN KEY (EquipeGagnanteId) REFERENCES Equipes(EquipeId),
+    FOREIGN KEY (EquipePerdanteId) REFERENCES Equipes(EquipeId),
+    -- Add other properties as needed...
+);

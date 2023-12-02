@@ -1,8 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using Projet.Net.Models;
+using System;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+var connectionsstring = builder.Configuration.GetConnectionString("con");
+builder.Services.AddDbContext<IitgamingContext>(
+    options => options.UseSqlServer(connectionsstring));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
