@@ -9,37 +9,137 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Projet.Net
 build_property.RootNamespace = Projet.Net
-build_property.ProjectDir = C:\Users\amink\source\repos\Projet.NET\Projet.Net\
+build_property.ProjectDir = C:\Users\abdah\source\repos\Projet.net\Projet.NET\Projet.Net\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\amink\source\repos\Projet.NET\Projet.Net
+build_property.MSBuildProjectDirectory = C:\Users\abdah\source\repos\Projet.net\Projet.NET\Projet.Net
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/amink/source/repos/Projet.NET/Projet.Net/Views/Home/Index.cshtml]
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Equipes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Equipes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Equipes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Equipes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Equipes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amink/source/repos/Projet.NET/Projet.Net/Views/Home/Privacy.cshtml]
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amink/source/repos/Projet.NET/Projet.Net/Views/Shared/Error.cshtml]
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Joueur/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm91ZXVyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Joueur/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm91ZXVyXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Joueur/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm91ZXVyXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Joueur/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm91ZXVyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Joueur/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm91ZXVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Resultats/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdWx0YXRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Resultats/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdWx0YXRzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Resultats/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdWx0YXRzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Resultats/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdWx0YXRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Resultats/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdWx0YXRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amink/source/repos/Projet.NET/Projet.Net/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amink/source/repos/Projet.NET/Projet.Net/Views/_ViewImports.cshtml]
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Tournois/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cm5vaXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Tournois/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cm5vaXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Tournois/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cm5vaXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Tournois/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cm5vaXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Tournois/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cm5vaXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Users/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Users/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Users/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Users/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amink/source/repos/Projet.NET/Projet.Net/Views/_ViewStart.cshtml]
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amink/source/repos/Projet.NET/Projet.Net/Views/Shared/_Layout.cshtml]
+[C:/Users/abdah/source/repos/Projet.net/Projet.NET/Projet.Net/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-zia9rdke2s
