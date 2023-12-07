@@ -55,7 +55,7 @@ namespace Projet.Net.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TournoiId,Nom,Descr,Jeu,DateDebut,DateFin")] Tournoi tournoi)
+        public async Task<IActionResult> Create([Bind("Nom,Descr,Jeu,DateDebut,DateFin")] Tournoi tournoi)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +87,7 @@ namespace Projet.Net.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("TournoiId,Nom,Descr,Jeu,DateDebut,DateFin")] Tournoi tournoi)
+        public async Task<IActionResult> Edit(int id, [Bind("Nom,Descr,Jeu,DateDebut,DateFin")] Tournoi tournoi)
         {
             if (id != tournoi.TournoiId)
             {

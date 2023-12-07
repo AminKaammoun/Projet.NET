@@ -49,9 +49,9 @@ namespace Projet.Net.Controllers
         // GET: Resultats/Create
         public IActionResult Create()
         {
-            ViewData["EquipeGagnanteId"] = new SelectList(_context.Equipes, "EquipeId", "EquipeId");
-            ViewData["EquipePerdanteId"] = new SelectList(_context.Equipes, "EquipeId", "EquipeId");
-            ViewData["TournoiId"] = new SelectList(_context.Tournois, "TournoiId", "TournoiId");
+            ViewData["EquipeGagnanteId"] = new SelectList(_context.Equipes, "EquipeId", "NomEquipe");
+            ViewData["EquipePerdanteId"] = new SelectList(_context.Equipes, "EquipeId", "NomEquipe");
+            ViewData["TournoiId"] = new SelectList(_context.Tournois, "TournoiId", "Nom");
             return View();
         }
 
@@ -60,7 +60,7 @@ namespace Projet.Net.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ResultatId,TournoiId,EquipeGagnanteId,EquipePerdanteId,ScoreGagnant,ScorePerdant,DateMatch")] Resultat resultat)
+        public async Task<IActionResult> Create([Bind("TournoiId,EquipeGagnanteId,EquipePerdanteId,ScoreGagnant,ScorePerdant,DateMatch")] Resultat resultat)
         {
             if (ModelState.IsValid)
             {
@@ -68,9 +68,9 @@ namespace Projet.Net.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EquipeGagnanteId"] = new SelectList(_context.Equipes, "EquipeId", "EquipeId", resultat.EquipeGagnanteId);
-            ViewData["EquipePerdanteId"] = new SelectList(_context.Equipes, "EquipeId", "EquipeId", resultat.EquipePerdanteId);
-            ViewData["TournoiId"] = new SelectList(_context.Tournois, "TournoiId", "TournoiId", resultat.TournoiId);
+            ViewData["EquipeGagnanteId"] = new SelectList(_context.Equipes, "EquipeId", "NomEquipe", resultat.EquipeGagnanteId);
+            ViewData["EquipePerdanteId"] = new SelectList(_context.Equipes, "EquipeId", "NomEquipe", resultat.EquipePerdanteId);
+            ViewData["TournoiId"] = new SelectList(_context.Tournois, "TournoiId", "Nom", resultat.TournoiId);
             return View(resultat);
         }
 
@@ -87,9 +87,9 @@ namespace Projet.Net.Controllers
             {
                 return NotFound();
             }
-            ViewData["EquipeGagnanteId"] = new SelectList(_context.Equipes, "EquipeId", "EquipeId", resultat.EquipeGagnanteId);
-            ViewData["EquipePerdanteId"] = new SelectList(_context.Equipes, "EquipeId", "EquipeId", resultat.EquipePerdanteId);
-            ViewData["TournoiId"] = new SelectList(_context.Tournois, "TournoiId", "TournoiId", resultat.TournoiId);
+            ViewData["EquipeGagnanteId"] = new SelectList(_context.Equipes, "EquipeId", "NomEquipe", resultat.EquipeGagnanteId);
+            ViewData["EquipePerdanteId"] = new SelectList(_context.Equipes, "EquipeId", "NomEquipe", resultat.EquipePerdanteId);
+            ViewData["TournoiId"] = new SelectList(_context.Tournois, "TournoiId", "Nom", resultat.TournoiId);
             return View(resultat);
         }
 
@@ -98,7 +98,7 @@ namespace Projet.Net.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ResultatId,TournoiId,EquipeGagnanteId,EquipePerdanteId,ScoreGagnant,ScorePerdant,DateMatch")] Resultat resultat)
+        public async Task<IActionResult> Edit(int id, [Bind("TournoiId,EquipeGagnanteId,EquipePerdanteId,ScoreGagnant,ScorePerdant,DateMatch")] Resultat resultat)
         {
             if (id != resultat.ResultatId)
             {
@@ -125,9 +125,9 @@ namespace Projet.Net.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EquipeGagnanteId"] = new SelectList(_context.Equipes, "EquipeId", "EquipeId", resultat.EquipeGagnanteId);
-            ViewData["EquipePerdanteId"] = new SelectList(_context.Equipes, "EquipeId", "EquipeId", resultat.EquipePerdanteId);
-            ViewData["TournoiId"] = new SelectList(_context.Tournois, "TournoiId", "TournoiId", resultat.TournoiId);
+            ViewData["EquipeGagnanteId"] = new SelectList(_context.Equipes, "EquipeId", "NomEquipe", resultat.EquipeGagnanteId);
+            ViewData["EquipePerdanteId"] = new SelectList(_context.Equipes, "EquipeId", "NomEquipe", resultat.EquipePerdanteId);
+            ViewData["TournoiId"] = new SelectList(_context.Tournois, "TournoiId", "Nom", resultat.TournoiId);
             return View(resultat);
         }
 

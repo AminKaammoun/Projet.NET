@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -21,7 +20,7 @@ namespace Projet.Net.Controllers
         // GET: Joueur
         public async Task<IActionResult> Index()
         {
-            var iitgamingContext = _context.Joueurs.Include(j => j.Equipe).Include(j => j.User);
+            var iitgamingContext = _context.Joueurs.Include(j => j.Equipe);
             return View(await iitgamingContext.ToListAsync());
         }
 
@@ -35,7 +34,6 @@ namespace Projet.Net.Controllers
 
             var joueur = await _context.Joueurs
                 .Include(j => j.Equipe)
-                .Include(j => j.User)
                 .FirstOrDefaultAsync(m => m.JoueurId == id);
             if (joueur == null)
             {
@@ -48,28 +46,37 @@ namespace Projet.Net.Controllers
         // GET: Joueur/Create
         public IActionResult Create()
         {
-            ViewData["EquipeId"] = new SelectList(_context.Equipes, "EquipeId", "EquipeId");
-            ViewData["UserId"] = new SelectList(_context.Users, "UserId", "UserId");
+            // Populate EquipeId with the Equipe names
+            ViewData["EquipeId"] = new SelectList(_context.Equipes, "EquipeId", "NomEquipe");
             return View();
         }
 
         // POST: Joueur/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("JoueurId,Pseudonyme,DateNaissance,EquipeId,UserId")] Joueur joueur)
+        public async Task<IActionResult> Create([Bind("Pseudonyme,DateNaissance,EquipeId")] Joueur joueur)
         {
             if (ModelState.IsValid)
             {
+                // Check if a player with the same pseudonyme already exists
+                if (_context.Joueurs.Any(e => e.Pseudonyme == joueur.Pseudonyme))
+                {
+                    ModelState.AddModelError("Pseudonyme", "A player with this pseudonyme already exists.");
+                    ViewData["EquipeId"] = new SelectList(_context.Equipes, "EquipeId", "NomEquipe", joueur.EquipeId);
+                    return View(joueur);
+                }
+
+                // Remove the manual assignment of EquipeId
                 _context.Add(joueur);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EquipeId"] = new SelectList(_context.Equipes, "EquipeId", "EquipeId", joueur.EquipeId);
-            ViewData["UserId"] = new SelectList(_context.Users, "UserId", "UserId", joueur.UserId);
+
+            // Use EquipeName instead of EquipeId for SelectList
+            ViewData["EquipeId"] = new SelectList(_context.Equipes, "EquipeId", "NomEquipe", joueur.EquipeId);
             return View(joueur);
         }
+
 
         // GET: Joueur/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -84,17 +91,16 @@ namespace Projet.Net.Controllers
             {
                 return NotFound();
             }
-            ViewData["EquipeId"] = new SelectList(_context.Equipes, "EquipeId", "EquipeId", joueur.EquipeId);
-            ViewData["UserId"] = new SelectList(_context.Users, "UserId", "UserId", joueur.UserId);
+
+            // Use EquipeName instead of EquipeId for SelectList
+            ViewData["EquipeId"] = new SelectList(_context.Equipes, "EquipeId", "NomEquipe", joueur.EquipeId);
             return View(joueur);
         }
 
         // POST: Joueur/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("JoueurId,Pseudonyme,DateNaissance,EquipeId,UserId")] Joueur joueur)
+        public async Task<IActionResult> Edit(int id, [Bind("JoueurId,Pseudonyme,DateNaissance")] Joueur joueur)
         {
             if (id != joueur.JoueurId)
             {
@@ -121,8 +127,9 @@ namespace Projet.Net.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EquipeId"] = new SelectList(_context.Equipes, "EquipeId", "EquipeId", joueur.EquipeId);
-            ViewData["UserId"] = new SelectList(_context.Users, "UserId", "UserId", joueur.UserId);
+
+            // Use EquipeName instead of EquipeId for SelectList
+            ViewData["EquipeId"] = new SelectList(_context.Equipes, "EquipeId", "NomEquipe", joueur.EquipeId);
             return View(joueur);
         }
 
@@ -136,7 +143,6 @@ namespace Projet.Net.Controllers
 
             var joueur = await _context.Joueurs
                 .Include(j => j.Equipe)
-                .Include(j => j.User)
                 .FirstOrDefaultAsync(m => m.JoueurId == id);
             if (joueur == null)
             {
@@ -155,19 +161,20 @@ namespace Projet.Net.Controllers
             {
                 return Problem("Entity set 'IitgamingContext.Joueurs'  is null.");
             }
+
             var joueur = await _context.Joueurs.FindAsync(id);
             if (joueur != null)
             {
                 _context.Joueurs.Remove(joueur);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool JoueurExists(int id)
         {
-          return (_context.Joueurs?.Any(e => e.JoueurId == id)).GetValueOrDefault();
+            return (_context.Joueurs?.Any(e => e.JoueurId == id)).GetValueOrDefault();
         }
     }
 }

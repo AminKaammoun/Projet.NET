@@ -34,13 +34,10 @@
                 @Html.DisplayFor(modelItem => item.Pseudonyme)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DateNaissance)
+                    @Html.DisplayFor(modelItem => item.DateNaissance)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Equipe.EquipeId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.User.UserId)
+                @Html.DisplayFor(modelItem => item.Equipe.NomEquipe)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.JoueurId">Edit</a> |
